@@ -69,5 +69,12 @@ int main()
     for (auto it = numbers.begin(); it != numbers.end(); ++it) {
         std::cout << *it << std::endl;
     }
+
+    // Use it when:
+    // - type is already clear from right side of assignment
+    // - for iterators
+    // - to save a lot of typing
+
+    // Don't use it for numeric types.
 }
 
