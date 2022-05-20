@@ -42,6 +42,7 @@ int main()
 	Person* pete = new Person("Pete");
 	Person* petra = new Person("Petra");
 	pete->setPartner(petra);
+	petra->setPartner(pete);
 	addressBook.addPerson(pete);
 	addressBook.addPerson(petra);
 
