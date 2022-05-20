@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <memory>
 
 class Person {
 public:
@@ -50,6 +51,30 @@ int main()
 	// - Memory leak. Can of course be solved with delete.
 	// - Who is owner of Person memory? Who is reponsible of deleting it?
 
-	// Show possible solution with unique_ptr and weak_ptr.
-	// Show possible solution with shared_ptr.
+	// Possible solution is using unique_ptr or shared_ptr.
+	
+	// unique_ptr indicates unique ownership of resource. When unique_ptr goes out of scope, it will free the memory 'attached' to it.
+	
+	// Example:
+	// std::unique_ptr<Person> pete{ new Person("Pete") };
+	// 
+	// Or better, by using factory functions:
+	// 
+	// std::unique_ptr<Person> petra = std::make_unique<Person>("Petra");
+	//
+
+
+	// shared_ptr indicates shared ownership of resource. It reference counts the number of shared_ptr instances referring to the same memory and will free memory once the reference count reaches 0.
+
+	// Example:
+	// std::shared_ptr<Person> pete{ new Person("Pete") };
+	//
+	// Or better again:
+	//
+	// std::shared_ptr<Person> petra = std::make_shared<Person>("Petra");
+
+	// Raw pointer can still be fetched from unique_ptr and shared_ptr with .get member function. E.g.:
+	// Person* rawPtr = pete.get();
+
+	// Live exercise: Rebuild above code with unique_ptr or shared_ptr.
 }
