@@ -10,6 +10,10 @@ public:
 		: _name(name) {
 	}
 
+	~Person() {
+		std::cout << _name << " destructed." << std::endl;
+	}
+
 	void setPartner(Person* partner) {
 		_partner = partner;
 	}
@@ -35,14 +39,16 @@ private:
 int main()
 {
 	AddressBook addressBook;
-	Person* tonni = new Person("Tonni");
-	Person* diana = new Person("Diana");
-	tonni->setPartner(diana);
-	addressBook.addPerson(tonni);
-	addressBook.addPerson(diana);
+	Person* pete = new Person("Pete");
+	Person* petra = new Person("Petra");
+	pete->setPartner(petra);
+	addressBook.addPerson(pete);
+	addressBook.addPerson(petra);
 
 	// Problem/challenge:
-	// - Memory leak.
+	// - Memory leak. Can of course be solved with delete.
 	// - Who is owner of Person memory? Who is reponsible of deleting it?
 
+	// Show possible solution with unique_ptr and weak_ptr.
+	// Show possible solution with shared_ptr.
 }
