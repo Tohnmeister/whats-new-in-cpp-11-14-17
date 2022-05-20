@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{dfce1010-08f7-4f8e-bb4d-eb4973ffd2bf}</ProjectGuid>
-    <RootNamespace>WhatsNew</RootNamespace>
+    <ProjectGuid>{45b167f1-904d-413b-a44d-944ca4886fa3}</ProjectGuid>
+    <RootNamespace>My01SmartPointers</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="CONTENTS.md" />
+    <ClCompile Include="01_SmartPointers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddressBook.h" />
+    <ClInclude Include="Person.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
