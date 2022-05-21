@@ -5,6 +5,7 @@
  * Smart pointers
  * Automatic type deduction
  * range based for loops
+ * structured bindings
  * Move semantics
  * Defaulted and deleted functions
  * final and override
