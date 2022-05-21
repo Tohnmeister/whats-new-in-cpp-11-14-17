@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d437d3e8-ea1b-4d01-a4d1-ced48ad40114}</ProjectGuid>
-    <RootNamespace>My02Auto</RootNamespace>
+    <ProjectGuid>{7b697a83-a4f3-4332-be5e-98f15dfcb64f}</ProjectGuid>
+    <RootNamespace>My04StructuredBindings</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="02_Auto.cpp" />
+    <ClCompile Include="04_StructuredBindings.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
