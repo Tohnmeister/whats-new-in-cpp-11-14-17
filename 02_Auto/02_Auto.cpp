@@ -10,9 +10,13 @@ Car getCar() {
     return Car{};
 }
 
+std::vector<int> getNumbers() {
+    return { 1, 2, 3 };
+}
+
 int main()
 {
-    std::vector<int> numbers = { 1, 2, 3 };
+    std::vector<int> numbers = getNumbers();
     std::unique_ptr<Person> person = std::make_unique<Person>();
     Car myCar = getCar();
 
@@ -20,12 +24,7 @@ int main()
         std::cout << *it << std::endl;
     }
 
-    // See below.
-    
-    
-    
-    
-    
+ 
     
     
     
@@ -64,9 +63,10 @@ int main()
 
     // Example:
 
+    auto numbers2 = getNumbers();
     auto person2 = std::make_unique<Person>();
     auto anotherCar = getCar();
-    for (auto it = numbers.begin(); it != numbers.end(); ++it) {
+    for (auto it = numbers2.begin(); it != numbers2.end(); ++it) {
         std::cout << *it << std::endl;
     }
 
