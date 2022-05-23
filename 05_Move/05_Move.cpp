@@ -90,7 +90,7 @@ int main() {
 
 
     // And here, person is an lvalue, and createPerson("Jack") is an rvalue.
-    Person person = createPerson("Jack");
+    Person person1 = createPerson("Jack");
 
 
 
@@ -123,7 +123,7 @@ int main() {
 
 
     // Before C++11, would create a temporary Person, which would then be placed inside's Person's copy constructor to initialize Person.
-    Person person1 = createPerson("Jack");
+    Person person2 = createPerson("Jack");
 
     // But considering that the right side is a temporary and isn't needed anymore, wouldn't it be nice if there was a mechanism that allowed you to
     // move the temporary inside the newly created Person, rather than copying it?
@@ -134,7 +134,7 @@ int main() {
 
 
     // First, important to understand is, that one can create a reference to an rvalue:
-    Person&& person2 = createPerson("Jack");
+    Person&& person3 = createPerson("Jack");
 
     // Now the lifetime of the temporary is extended to the scope of person2.
 
@@ -147,7 +147,7 @@ int main() {
     // Person& operator=(Person&& other); // Move assignment operator.
 
     // As can be seen, they accept a rvalue reference. Meaning, if such a function is available, the following:
-    Person person3 = createPerson("Jack");
+    Person person4 = createPerson("Jack");
     // would not call the copy constructor, but the move constructor instead.
 
     // Move functions should, instead of bluntly copying members, move resources in an efficient way. E.g. by simply swapping
@@ -155,8 +155,8 @@ int main() {
 
 
 
-    // Now let's say someone is done with person3 and wants to move it to another Person. What will the following statement do?
-    Person person4 = person3;
+    // Now let's say someone is done with person4 and wants to move it to another Person. What will the following statement do?
+    Person person5 = person4;
 
 
 
@@ -176,7 +176,7 @@ int main() {
     // It copies. Why? person3 is an lvalue. And for lvalues the copy constructor will be called.
 
     // std::move to the rescue. In order to actually move person3 into person4, person3 has to be cast into an rvalue reference, by doing the following:
-    Person person5 = std::move(person3);
+    Person person6 = std::move(person4);
 
 
 
