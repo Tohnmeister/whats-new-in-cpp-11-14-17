@@ -28,4 +28,6 @@ int main() {
     std::cout << "areAllOdd: " << areAllOdd << "\n";
     std::cout << "containsEven: " << containsEven << "\n";
     std::cout << "areNoneEven: " << areNoneEven << "\n";
+
+    return 0;
 }
