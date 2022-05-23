@@ -20,6 +20,7 @@
 * constexpr
 * delegating and inherited constructors
 * nullptr
+* initialization in class declaration
 * brace or equal initializers
 * type aliases
 * variadic templates
