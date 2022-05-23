@@ -1,8 +1,7 @@
 #include <iostream>
 #include <map>
 
-int main()
-{
+int main() {
     std::pair<int, std::string> pair = { 1, "one" };
     std::cout << pair.first << " : " << pair.second << std::endl;
 
@@ -125,7 +124,7 @@ int main()
 
 
 
-    
+
     for (const auto& [id, name] : idCustomerMap) {
         std::cout << id << " : " << name << std::endl;
     }

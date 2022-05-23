@@ -14,8 +14,7 @@ std::vector<int> getNumbers() {
     return { 1, 2, 3 };
 }
 
-int main()
-{
+int main() {
     std::vector<int> numbers = getNumbers();
     std::unique_ptr<Person> person = std::make_unique<Person>();
     Car myCar = getCar();
@@ -24,39 +23,39 @@ int main()
         std::cout << *it << std::endl;
     }
 
- 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Above example shows a lot of redundant type information.
     // C++11 introduced the 'auto' keyword for automatic type deduction.
     // Everything is still statically checked. The type cannot be changed. But the compiled deduces the type for you.

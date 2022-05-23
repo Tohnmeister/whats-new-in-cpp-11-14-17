@@ -16,7 +16,7 @@ public:
     Person& operator=(const Person& person) {
         if (this != &person) {
             std::cout << "copy assignment" << std::endl;
-            
+
             _name = person._name;
         }
 
@@ -44,8 +44,7 @@ Person createPerson(const std::string& name) {
     return person;
 }
 
-int main()
-{
+int main() {
     auto person = createPerson("Pete");
     AddressBook addressBook;
     addressBook.addPerson(person);
@@ -54,10 +53,10 @@ int main()
 
     // And how many of them are really needed?
 
-    
-    
-    
-    
+
+
+
+
 
 
 

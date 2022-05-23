@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 
-int main()
-{
+int main() {
     std::vector<int> numbers = { 1, 2, 3 };
 
     for (auto it = numbers.begin(); it != numbers.end(); ++it) {
