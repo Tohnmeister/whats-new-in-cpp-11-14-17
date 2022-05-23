@@ -10,12 +10,12 @@
  * Defaulted and deleted functions
  * final and override
  * lambda expressions
- * std::thread, std::mutex, std::atomic and std::scoped_lock
  * list initialization
+ * scoped enums
 
 ## Nice to discuss
 
-* scoped enums
+* std::thread, std::mutex, std::atomic and std::scoped_lock
 * new algorithms
 * constexpr
 * delegating and inherited constructors
